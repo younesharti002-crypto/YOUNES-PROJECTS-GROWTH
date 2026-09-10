@@ -2,9 +2,32 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { projects } from "@/lib/projects";
 
+const title = "المشاريع | Younes";
+const description =
+  "مشاريع يونس الرقمية والتعليمية وتجارب البناء والنمو: الفكرة، المشكل، الحل، المرحلة الحالية والدروس العملية من كل مشروع.";
+
 export const metadata: Metadata = {
-  title: "المشاريع | Younes",
-  description: "جميع مشاريع يونس الرقمية والتعليمية ومراحل بنائها.",
+  title,
+  description,
+  alternates: { canonical: "/projects" },
+  openGraph: {
+    type: "website",
+    url: "/projects",
+    title: "المشاريع | Younes | مشاريع ونمو",
+    description,
+    images: [
+      {
+        url: "/assets/hero-ai.jpeg",
+        alt: "مشاريع Younes الرقمية وتجارب البناء والنمو",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "المشاريع | Younes | مشاريع ونمو",
+    description,
+    images: ["/assets/hero-ai.jpeg"],
+  },
 };
 
 export default function ProjectsPage() {
