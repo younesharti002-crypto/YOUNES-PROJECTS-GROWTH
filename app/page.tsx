@@ -59,7 +59,7 @@ export default function Home() {
             <a href="#service">التجربة المجانية</a>
             <Link href="/projects">المشاريع</Link>
             <a href="#work">شنو كندير؟</a>
-            <a href="#story">شكون أنا؟</a>
+            <Link href="/about">شكون أنا؟</Link>
           </div>
           <Link className="small-cta" href="/platform">
             دخول المنصة
@@ -76,8 +76,9 @@ export default function Home() {
             بدا تبنيه.
           </h1>
           <p>
-            كنشارك معاك تجربة بناء المشاريع الرقمية كما هي، وكنعاونك ترتب
-            الفكرة ديالك باش تخرج بأول خطة واضحة وقابلة للتجربة.
+            أنا يونس. كنوثق تجربة بناء المشاريع الرقمية باستعمال AI كما هي:
+            من الفكرة للتجربة والتطبيق، شنو خدم وشنو ما خدمش، وكيفاش كنحاول
+            نطور كل مشروع خطوة بخطوة.
           </p>
           <div className="hero-actions">
             <Link className="primary-button" href="/platform">
@@ -85,10 +86,10 @@ export default function Home() {
             </Link>
             <span>حساب مجاني · بلا بطاقة بنكية</span>
           </div>
-          <div className="hero-proof" aria-label="مزايا البداية">
-            <b>معلوماتك</b><i />
-            <b>تحليل واضح</b><i />
-            <b>تقرير شخصي</b>
+          <div className="hero-proof" aria-label="محاور المحتوى">
+            <b>مشاريع رقمية</b><i />
+            <b>تجارب عملية</b><i />
+            <b>تعلم موثق</b>
           </div>
         </div>
         <div className="hero-art">
@@ -138,12 +139,12 @@ export default function Home() {
       <section className="shell section" id="work">
         <div className="section-heading">
           <div><span className="kicker">شنو كندير؟</span><h2>من الفكرة إلى مشروع قابل للنمو</h2></div>
-          <p>المحتوى كيبني الثقة، والمنصة كتوجه التعلم، وH Digital Agency كتتكلف بالتنفيذ التقني والتسويقي للمشاريع.</p>
+          <p>كنبني وكنجرب مشاريع رقمية باستعمال الأدوات والـAI، وكنوثق القرارات، المشاكل والدروس. PLAN B كيوجه التعلم، وH Digital Agency كتتكلف بالتنفيذ التقني والتسويقي.</p>
         </div>
         <div className="work-grid">
           <article><span>01</span><h3>PLAN B</h3><p>استشارة، تقرير، دورات ومسار عملي لأصحاب الأفكار والمشاريع.</p><Link href="/platform">جرب المنصة ←</Link></article>
           <article><span>02</span><h3>H Digital Agency</h3><p>بناء المواقع والمنصات، الأتمتة، التسويق ومساعدة المشاريع على النمو.</p><a href="https://h-digital-agency.vercel.app/" target="_blank" rel="noopener noreferrer">شوف الوكالة ↗</a></article>
-          <article><span>03</span><h3>محتوى مشاريع ونمو</h3><p>كنوثق شنو خدم، شنو ما خدمش، والدروس اللي خرجت بها من كل تجربة.</p><a href="#story">تعرف على الرحلة ←</a></article>
+          <article><span>03</span><h3>محتوى مشاريع ونمو</h3><p>كنوثق شنو خدم، شنو ما خدمش، والدروس اللي خرجت بها من كل تجربة.</p><Link href="/about">تعرف على الرحلة ←</Link></article>
         </div>
         <div className="projects-link-row">
           <Link className="primary-button" href="/projects">شوف جميع المشاريع</Link>
@@ -171,6 +172,7 @@ export default function Home() {
             ))}
           </div>
           <blockquote className="truth">«اليوم ما كنبيعش ليك نجاحاً ما وصلتش ليه. كنشارك معاك الطريق كما هو: شنو تعلمت، شنو طبقت، فين غلطت، وكيفاش كنعاود نبني.»<small>أنا يونس… ومازال كنبني قصتي.</small></blockquote>
+          <div className="card-actions"><Link className="primary-button" href="/about">قرا القصة كاملة</Link></div>
         </div>
       </section>
 
