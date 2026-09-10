@@ -65,7 +65,12 @@ export default async function ProjectPage({ params }: Props) {
         <span className="eyebrow">{project.category}</span>
         <h1>{project.name}</h1>
         <p>{project.summary}</p>
-        {project.url && <a className="primary-button" href={project.url} target="_blank" rel="noopener noreferrer">فتح المشروع ↗</a>}
+        <div className="card-actions">
+          {project.caseStudySlug && (
+            <Link className="primary-button" href={`/case-studies/${project.caseStudySlug}`}>اقرأ الـCase Study الموثقة</Link>
+          )}
+          {project.url && <a className="text-link" href={project.url} target="_blank" rel="noopener noreferrer">فتح المشروع ↗</a>}
+        </div>
       </section>
       <section className="shell project-detail-grid">
         {details.map(([label, value]) => <article key={label}><span>{label}</span><p>{value}</p></article>)}

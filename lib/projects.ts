@@ -9,6 +9,7 @@ export type Project = {
   status: string;
   lesson: string;
   url?: string;
+  caseStudySlug?: string;
 };
 
 export const projects: Project[] = [
@@ -44,6 +45,7 @@ export const projects: Project[] = [
     solution: "فضاء للدروس، الفيديوهات والمتابعة.",
     status: "مشروع مستقل على Vercel",
     lesson: "المنصة خاصها تخدم رحلة المتعلم، ماشي غير تعرض المحتوى.",
+    caseStudySlug: "prof-harti-academy",
   },
   {
     slug: "prof-anis-platform",

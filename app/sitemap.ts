@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { caseStudies } from "@/lib/case-studies";
 import { projects } from "@/lib/projects";
 
 const siteUrl = "https://younes-projects-growth.vercel.app";
@@ -17,5 +18,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  return [...staticRoutes, ...projectRoutes];
+  const caseStudyRoutes = caseStudies.map(
+    (caseStudy): MetadataRoute.Sitemap[number] => ({
+      url: `${siteUrl}/case-studies/${caseStudy.slug}`,
+    }),
+  );
+
+  return [...staticRoutes, ...projectRoutes, ...caseStudyRoutes];
 }
