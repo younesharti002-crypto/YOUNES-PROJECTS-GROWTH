@@ -12,7 +12,34 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const project = getProject(slug);
-  return project ? { title: `${project.name} | مشاريع يونس`, description: project.summary } : {};
+  if (!project) return {};
+
+  const title = `${project.name} | مشاريع يونس`;
+  const canonical = `/projects/${project.slug}`;
+
+  return {
+    title,
+    description: project.summary,
+    alternates: { canonical },
+    openGraph: {
+      type: "website",
+      url: canonical,
+      title,
+      description: project.summary,
+      images: [
+        {
+          url: "/assets/hero-ai.jpeg",
+          alt: `${project.name} — مشروع موثق ضمن Younes | مشاريع ونمو`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: project.summary,
+      images: ["/assets/hero-ai.jpeg"],
+    },
+  };
 }
 
 export default async function ProjectPage({ params }: Props) {
