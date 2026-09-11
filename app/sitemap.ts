@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/about` },
     { url: `${siteUrl}/projects` },
     { url: `${siteUrl}/platform` },
+    { url: `${siteUrl}/contact` },
   ];
 
   const projectRoutes = projects.map(
