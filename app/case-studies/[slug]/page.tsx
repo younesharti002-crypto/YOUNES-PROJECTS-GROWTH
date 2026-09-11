@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { caseStudies, getCaseStudy } from "@/lib/case-studies";
@@ -110,6 +111,29 @@ export default async function CaseStudyPage({ params }: Props) {
           <article><span>الحالة الموثقة</span><p>{caseStudy.status}</p></article>
         </div>
       </section>
+
+      {caseStudy.slug === "prof-harti-academy" && (
+        <section className="shell section">
+          <div className="section-heading">
+            <div><span className="kicker">تصور بصري</span><h2>كيف يقدر يبان Dashboard ديال المتابعة؟</h2></div>
+            <p>هاد الصورة Concept Mockup تخيلي باش نورّيو بصرياً فكرة Dashboard فيها التلاميذ، التقدم، الأنشطة والحصص. ماشي Screenshot من Production.</p>
+          </div>
+          <figure style={{ margin: 0 }}>
+            <div className="chapter-image" style={{ minHeight: 0, aspectRatio: "1100 / 619" }}>
+              <Image
+                src="/assets/prof-harti-dashboard-concept.webp"
+                alt="تصور تخيلي للوحة متابعة PROF HARTI Academy فيها تلاميذ وإحصائيات"
+                fill
+                sizes="(max-width: 900px) 100vw, 1100px"
+              />
+            </div>
+            <figcaption className="project-note" style={{ marginTop: 16 }}>
+              <strong>مهم: صورة تخيلية وليست بيانات حقيقية</strong>
+              <p>الأسماء، أعداد التلاميذ، نسب التقدم، النتائج وباقي الإحصائيات الظاهرة فالصورة أمثلة تصميمية فقط. القياسات الحقيقية غادي تتوثق منين تكون عندنا بيانات استعمال فعلية وقابلة للإثبات.</p>
+            </figcaption>
+          </figure>
+        </section>
+      )}
 
       <section className="shell section">
         <div className="section-heading">
